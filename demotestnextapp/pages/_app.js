@@ -1,15 +1,15 @@
-import '../styles/globals.css'
-
+import "../styles/globals.css";
+import Navbar from "../component/Navbar";
+import Structure from "../component/Structure";
 function MyApp({ Component, pageProps }) {
-  return <div>
-    <h1 style={{
-      border: "2px solid red",
-      margin: 0
-
-    }}>hello</h1>
-   <Component {...pageProps} /> 
-  </div>
-  
+  return (
+    <div>
+      <Structure>
+        <Navbar />
+        <Component {...pageProps} />
+      </Structure>
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;
